@@ -1,0 +1,287 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is mihttps://www.overleaf.com/project/629897c4ae3a330034fdad8bssing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Manish}{Kumar}{ \urlstyle{same} 
+\href{mailto:mverma6250@gmail.com}{mverma6250@gmail.com} | 979******* 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Python \textbullet{} 
+  MySQL \\
+\location{Basic:}
+Scala
+\sectionsep
+\subsection{big data}
+%\location{Other:}
+Spark \textbullet{} PySpark \textbullet{} Hive\\
+Impala \textbullet{} 
+HDFS \textbullet{} YARN\\
+Spark SQL
+\sectionsep
+\subsection{Orchestration}
+%\location{Other:}
+Airflow \textbullet{} Kubernetes \textbullet{} CA Autosys\\
+
+
+\sectionsep
+\subsection{Familiar}
+Elastic search \textbullet{} Neo4j\\
+Azure Devops \textbullet{} Fast API\\
+Azure Blob \textbullet{} AWS S3\\
+
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{NIT TRICHY}
+\descript{Materials Engineering}
+\location{June 2019 | Trichy, TamilNadu}
+\location{Cum. GPA:8.16/10}
+\sectionsep
+
+\subsection{SDS College}
+\descript{Senior Secondary School}
+\location{March 2014 | Kaler, Bihar}
+%\location{ Percentage: 72.8}
+\sectionsep
+
+%\subsection{Umairabad High School}
+%\location{Higher Secondary \\ March 2012|  Arwal, India}
+%\location{Percentage: 80}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Links} 
+
+Github:// \href{https://github.com/manisnitt}{\bf manisnitt} \\
+LinkedIn://  \href{https://www.linkedin.com/in/manish-kumar-373b86176/}{\bf manish-kumar} \\
+YouTube://  \href{https://www.youtube.com/channel/UCacvJAgrPTjSEdnZObMzpqQ}{\bf mverma6250} \\
+%Facebook:// \href{https://www.facebook.com/MANISH12340}{\bf manish12340} \\
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Python Programming\\
+Spark\\
+Hadoop\\
+MySQL\\
+Cloud computing\\
+Datawarehouse Modelling\\
+Data Strucure and Algorithm\\
+
+
+\sectionsep
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience}
+
+\runsubsection{Reliance Jio}
+\descript{| Data Engineer }
+\location{Aug 2022 - Present | Gurgaon, India}
+\vspace{\topsep}
+% \textbf{Guiding a team and actively developing projects in Python, SQL, Spark, and Kubernetes, while overseeing deployments through agile CI/CD pipelines.} \\
+
+\textbf{Mentoring a team and driving project development through agile CI/CD pipelines.}
+{\fontspec{Lato-Bold}AUTOMATED DAG SCHEDULAR}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Created an API service to generate dynamic DAGs in \textbf{Apache Airflow}.
+\item Implemented scheduling capabilities, allowing for the efficient orchestration of data pipelines, optimizing data processing workflows.
+\end{tightemize}
+
+\vspace{\topsep}
+{\fontspec{Lato-Bold}BILLING LICENCE}
+\begin{tightemize}
+\item Developed an automated invoicing system, enabling dynamic pricing adjustments on cloud service provider invoices.
+\item Integrated and processed billing data from multiple sources including AWS, Azure, GCP, and Oracle, handling \textbf{various file formats}.
+\item Implemented Spark optimization techniques such as \textbf{caching, multithreading, and broadcast} joins, resulting in a 30\% decrease in processing time for handling a daily load of around \textbf{800,000 records}.
+\end{tightemize}
+
+\sectionsep
+
+
+
+\runsubsection{ZS Associates}
+\descript{| Data Engineer }
+\location{Apr 2020 - Present | Pune, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\textbf{Led a DevOps workstream independently and managed a team of 3 members.
+} \\
+{\fontspec{Lato-Bold}MHCDM}
+\begin{tightemize}
+\item Delivered a project to migrate legacy on-premise processes to the cloud using Big Data technologies( 
+\textbf{Spark})
+\item Actively involved in detailed data analysis using \textbf{HIVE, Impala, Spark SQL}, SIT and UAT fixes in the 
+production environment.
+\item Worked on \textbf{Spark performance tuning} for overall performance optimization of the process.
+\end{tightemize}
+
+\vspace{\topsep}
+{\fontspec{Lato-Bold}INGESTION}
+
+\begin{tightemize}
+\item Worked on data ingestion pipeline to ingest the flat-file in the \textbf{Data lake}.
+\item Automated the flat-file loading from \textbf{AWS S3} to hive table with the help of an Orchestration tool like CA 
+Autosys.
+
+\end{tightemize}
+
+\sectionsep
+
+\runsubsection{Standav}
+\descript{| Associate Consultant }
+\location{Jan 2019 - Mar 2020 | Bengaluru, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Analysed more than 30,000 customer sales data to find the bottlenecks in the business process.
+\item Worked as Salesforce Admin and got exposure on sales cloud. 
+
+\end{tightemize}
+
+
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CERTIFICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Certifications} 
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% %
+% %
+% \begin{tightemize}
+% %
+% \item MySQL://\href{https://www.udemy.com/certificate/UC-Y78O5XOU/} {\bf certificate-SQL}
+% \item Python:// \href{https://www.udemy.com/certificate/UC-436fb7e8-66e9-4b20-a7%2e-0a46448a4466/}{\bf certificate-Python}
+% \item MS Excel://\href{https://www.udemy.com/certificate/UC-A7ZDUE71/} { \bf certificate-Excel}
+% \end{tightemize}
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
